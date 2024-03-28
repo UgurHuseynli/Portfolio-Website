@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+
+            <ul class="list-group">
+                <i class="fa-solid fa-xmark"></i>
+                <li class="list-item"><a href="#header">Home</a></li>
+                <li class="list-item"><a href="#about">About</a></li>
+                <li class="list-item"><a href="#myServices">Services</a></li>
+                <li class="list-item"><a href="#myWork">Portfolio</a></li>
+                <li class="list-item"><a href="#contact">Contact</a></li>
+            </ul>
+
+            <i class="fa-solid fa-bars"></i>
+        </nav>
+
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Kevin</span>
+                <br>
+                Jen From Autralia
+            </h1>
+        </div>
+    </header>
+
+
+    <section id="about">
+        <div class="container">
+            <img src="images/user.png" alt="user">
+            <div class="content">
+                <h1 class="title">About Me</h1>
+                <div class="description">
+                    Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Dignissimos Facere Earum Cum Laborum,
+                    Officia Vitae Labore Iure Sapiente Illum Rem Animi Impedit Minima, Quod Soluta Laboriosam Veniam
+                    Molestias Modi Quas! Nostrum Saepe Natus Quis, Dignissimos Dolorum Mollitia. Adipisci Sed Ipsam Est
+                    Nisi Accusantium. Aliquam Hic Deleniti Doloribus Iste Possimus Vitae.
+                </div>
+
+                <div class="tab-titles">
+                    <p class="tab-link skills active-link" data-tab-target="#Skills">Skills</p>
+                    <p class="tab-link experience" data-tab-target="#Experience">Experience</p>
+                    <p class="tab-link education" data-tab-target="#Education">Education</p>
+                </div>
+
+
+                <div class="tabContents active-tab" id="Skills" data-tab-content>
+                    <!-- Active Tab -->
+                    <ul>
+                        <li><span>UI/UX</span><br>
+                            Designing Web/App Interfaces
+                        </li>
+
+                        <li><span>Web Development</span><br>
+                            Web App Development
+                        </li>
+
+                        <li><span>App Development</span><br>
+                            Building Android/Ios Apps
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tabContents" id="Experience" data-tab-content>
+                    <ul>
+                        <li><span>2021-Current</span><br>
+                            UI/Ux Design Training At Et University
+                        </li>
+
+                        <li><span>2019-2021</span><br>
+                            Team Lead At StartApp LLC.
+                        </li>
+
+                        <li><span>2017-2019</span><br>
+                            Ui/Ux Design Executive At Coin Digital LTD.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="tabContents" id="Education" data-tab-content>
+                    <ul>
+                        <li><span>2016</span><br>
+                            UI/UX Design Training At ET University
+                        </li>
+
+                        <li><span>2016</span><br>
+                            MBA From MIT Bangalore.
+                        </li>
+
+                        <li><span>2014</span><br>
+                            BBA From ISM Bangalore.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- My Services Section Start -->
+
+    <section id="myServices">
+        <div class="container">
+            <h1 class="title">My Services</h1>
+
+            <div class="services-cards">
+                <div class="services-card">
+                    <i class="fa-solid fa-code"></i>
+
+                    <h2 class="services-card-title">Web Development</h2>
+
+                    <p class="services-card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus nesciunt odio eius, odit est doloremque.
+                    </p>
+
+                    <div class="link">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="services-card">
+                    <i class="fa-brands fa-figma"></i>
+
+                    <h2 class="services-card-title">UI/UX Design</h2>
+
+                    <p class="services-card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus nesciunt odio eius, odit est doloremque.
+                    </p>
+
+                    <div class="link">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="services-card">
+                    <i class="fa-brands fa-app-store"></i>
+
+                    <h2 class="services-card-title">App Design</h2>
+
+                    <p class="services-card-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus nesciunt odio eius, odit est doloremque.
+                    </p>
+
+                    <div class="link">
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- My Services Section End -->
+
+
+
+
+    <!-- My Work Section Start -->
+
+    <section id="myWork">
+        <div class="work-container">
+            <h1 class="title">My Work</h1>
+
+            <div class="work-cards">
+
+                <div class="work-card">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h1>Social Media App</h1>
+                        <div class="description">
+                            Lorem, Ipsum Dolor Sit
+                            Amet Consectetur Adipisicing Elit.
+                            Facilis Facere Quidem Placeat.
+                        </div>
+
+                        <div class="copyLink">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h1>Music App</h1>
+                        <div class="description">
+                            Lorem, Ipsum Dolor Sit
+                            Amet Consectetur Adipisicing Elit.
+                            Facilis Facere Quidem Placeat.
+                        </div>
+
+                        <div class="copyLink">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h1>Online Shopping App</h1>
+                        <div class="description">
+                            Lorem, Ipsum Dolor Sit
+                            Amet Consectetur Adipisicing Elit.
+                            Facilis Facere Quidem Placeat.
+                        </div>
+
+                        <div class="copyLink">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn">See More</button>
+
+        </div>
+    </section>
+
+    <!-- My Work Section End -->
+
+
+
+    <!-- Contact Section Start -->
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="row">
+                <div class="left-side">
+                    <h1 class="title">Contact Me</h1>
+
+                    <div class="email contact-type">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <p>contact@example.com</p>
+                    </div>
+
+                    <div class="phone contact-type">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0123456789</p>
+                    </div>
+
+                    <div class="social-media-icons">
+                        <div class="facebook icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+
+                        <div class="twitter icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                        <div class="instagram icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+
+                        <div class="linkedin icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                    </div>
+
+                    <button class="downloadCv btn">
+                        Download CV
+                    </button>
+                </div>
+
+
+                <div class="right-side">
+                    <form>
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                    </form>
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section End -->
+
+
+    <!-- Footer Section Start -->
+
+    <footer id="footer">
+        <p>
+            © Copyright | All Rights Reserved | Created By Ugur Huseyneliyev
+        </p>
+    </footer>
+
+    <!-- Footer Section End -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

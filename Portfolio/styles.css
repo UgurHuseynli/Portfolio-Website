@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+section {
+    padding: 5rem 10%;
+}
+
+body {
+    background: #080808;
+}
+
+/* Header Start */
+
+#header {
+    padding: 10px 10%;
+    background: url(images/background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar i {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    width: 18rem;
+}
+
+.navbar .list-group {
+    display: flex;
+    font-size: 20px;
+}
+
+.navbar .list-group {
+    list-style: none;
+}
+
+.navbar .list-group .list-item a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.navbar .list-group .list-item a::after {
+    content: '';
+    background: #ff004f;
+    width: 0;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transition: 0.2s ease-in;
+    bottom: -6px;
+}
+
+.navbar .list-group .list-item a:hover::after {
+    width: 100%;
+}
+
+
+.header-text {
+    color: #fff;
+    margin-top: 15%;
+}
+
+.header-text p {
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+/* Header End */
+
+
+/* About Section Start */
+
+#about {
+    padding-top: 8rem;
+}
+
+#about .container {
+    display: flex;
+}
+
+.container img {
+    width: 35%;
+    border-radius: 15px;
+}
+
+.container .content {
+    margin: 0 5rem;
+}
+
+.title {
+    font-size: 50px;
+    color: #fff;
+}
+
+.container .content .description {
+    color: #ababab;
+    font-size: 16px;
+}
+
+.tab-titles {
+    display: flex;
+    color: #ababab;
+    font-size: 18px;
+    margin-top: 2.5rem;
+}
+
+.tab-titles p {
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+.tab-link {
+    position: relative;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+    width: 100%;
+}
+
+.content ul {
+    color: #fff;
+    margin-top: 3rem;
+}
+
+.content ul li {
+    list-style: none;
+    background: #fff;
+    margin-bottom: 1.5rem;
+    padding: 3px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ababab;
+}
+
+.content ul li span {
+    color: #ff004f;
+    font-size: 18px;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active-tab[data-tab-content] {
+    display: block;
+    animation: fadeInAnimation ease 1.5s;
+}
+
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* About Section End */
+
+
+/* My Services Section Start */
+
+#myServices .container .services-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    margin-top: 2.5rem;
+}
+
+#myServices .container .services-cards .services-card {
+    background: #262626;
+    color: #fff;
+    padding: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#myServices .container .services-cards .services-card:hover {
+    background: #ff004f;
+    transform: translateY(-1rem);
+}
+
+#myServices .container .services-cards .services-card i {
+    font-size: 60px;
+}
+
+#myServices .container .services-cards .services-card .services-card-title {
+    font-weight: 500;
+    font-size: 25px;
+    margin: 1.2rem 0;
+}
+
+#myServices .container .services-cards .services-card .services-card-description {
+    font-size: 13px;
+}
+
+
+#myServices .container .services-cards .services-card .link {
+    margin-top: 1rem;
+}
+
+#myServices .container .services-cards .services-card .link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+
+/* My Services Section End */
+
+
+
+/* My Work Section Start */
+
+.work-cards {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.work-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.work-card:hover img {
+    border-radius: 15px;
+    scale: 1.1;
+}
+
+
+.work-cards .work-card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.work-card .layer {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff005186);
+    left: 0;
+    bottom: 0;
+    padding: 0 40px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.work-card:hover .layer {
+    height: 100%;
+}
+
+.work-card .layer h1 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.work-card .layer .description {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.work-card .layer .copyLink {
+    margin-top: 3rem;
+    background: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.work-card .layer .copyLink i {
+    font-size: 22px;
+    color: #ff004f;
+    padding: 12px;
+
+}
+
+.work-container .btn {
+    width: fit-content;
+    display: block;
+    margin: 5rem auto;
+    padding: 10px 50px;
+    background: none;
+    border: 2px solid #ff004f;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.work-container .btn:hover {
+    background: #ff004f;
+}
+
+/* My Work Section End */
+
+
+/* Contact Section Start */
+
+
+.contact-container {
+    width: 100%;
+}
+
+.contact-container .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-container .row .left-side {
+    flex-basis: 35%;
+}
+
+.contact-type {
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    margin: 2rem 0;
+}
+
+.contact-type i {
+    color: #ff004f;
+    font-size: 25px;
+    margin-right: 1rem;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    color: #ababab;
+    font-size: 30px;
+}
+
+.social-media-icons div {
+    margin-right: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.social-media-icons div:hover {
+    color: #ff004f;
+    transform: translateY(-0.5rem)
+}
+
+.downloadCv {
+    width: fit-content;
+    display: block;
+    padding: 10px 40px;
+    background: #ff004f;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.2s ease-in;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+.downloadCv:hover {
+    background: #ff004f;
+}
+
+.right-side {
+    flex-basis: 65%;
+}
+
+
+.right-side form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type='text'] {
+    text-transform: capitalize;
+}
+
+form input,
+textarea {
+    width: 100%;
+    margin: 2rem 0;
+    background: #262626;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    resize: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: fit-content;
+    display: block;
+    padding: 12px 50px;
+    background: #ff004f;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.2s ease-in;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* Contact Section End */
+
+
+/* Footer Section Start */
+
+#footer {
+    position: relative;
+    bottom: 0;
+    background: #262626;
+    color: #fff;
+    font-size: 20px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Section End */
+
+
+
+/* Media Queries */
+
+/* Mobile & Tablet */
+
+@media (max-width: 950px) {
+
+
+    section {
+        margin: 10px 2%;
+        padding: 10px 2%;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    #header {
+        padding: 10px 10%;
+        background: url(/images/background.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+
+    }
+
+    .navbar .list-group .list-item a::after {
+        background: #fff;
+    }
+
+    .navbar .logo img {
+        width: 16rem;
+    }
+
+    .header-text {
+        margin-top: 50%;
+        font-weight: 300;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .navbar i {
+        display: block;
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .navbar .list-group {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -300px;
+        top: 0;
+        background: #ff004f;
+        text-align: start;
+        padding: 25px;
+        height: 100vh;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .navbar .list-group li {
+        margin-bottom: 1.5rem;
+    }
+
+    .navbar .list-group li a {
+        font-size: 25px;
+    }
+
+    .navbar .fa-xmark {
+        color: #fff;
+        text-align: start;
+        padding: 20px;
+        font-size: 35px;
+        display: inline;
+    }
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    #about .container img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #about .container .content {
+        margin: 0;
+    }
+
+    .tab-titles p {
+        margin: 0 auto;
+    }
+
+
+    .contact-container .row {
+        display: block;
+        text-align: center;
+    }
+
+    .contact-container .row .contact-type {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-container .row .social-media-icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-container .row .social-media-icons .icon {
+        margin: 0 1.6rem;
+    }
+
+    .contact-container .btn {
+        width: 50%;
+        margin: 1.5rem auto;
+    }
+
+    footer p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
